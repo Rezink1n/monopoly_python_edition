@@ -6,6 +6,7 @@ def make_step(place):
     place += d
     if place > 39:
         place -= 40
+        money_up(1, 200)
     return place, d
 
 
