@@ -1,5 +1,7 @@
 import random
 
+from players import players
+
 
 def make_step(place):
     d = random.randint(2, 12)
@@ -17,11 +19,12 @@ def place_type_is(place):
         case 10: place_type = 'Prison'
         case 12 | 28: place_type = 'Company'
         case 20: place_type = 'Free parking'
-        case 30: place_type = 'Arrest'
-        case 38: place_type = '-100$'
         case 30:
             place_type = 'Arrest'
             new_place(1, 10)
+        case 38:
+            place_type = '-100$'
+            money_down(1, 100)
         case 5 | 15 | 25 | 35: place_type = 'Seaport'
         case 2 | 17 | 33: place_type = 'Treasury'
         case 7 | 22 | 36: place_type = 'Chance'
@@ -45,7 +48,6 @@ def money_up(player, quantity):
 
 def money_down(player, quantity):
     players[player][2] -= quantity
-
 
 
 def new_place(player, place):

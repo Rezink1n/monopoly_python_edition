@@ -1,12 +1,13 @@
 #  ADD GitHub
 import functions_all as func
+from players import players
 
 
-place = 0
 
-# testing
-for i in range(20):
+for i in range(100):
+    players[1][1], dice = func.make_step(players[1][1])
+    print('+', dice, players[1][1], end='|')
+    print(func.place_type_is(players[1][1]), end='|')
+    print('Money:', players[1][2])
 
-    place, dice = func.make_step(place)
-    print('Dice:', dice)
-    print('Place:', place)
+
