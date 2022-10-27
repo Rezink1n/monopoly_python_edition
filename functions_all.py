@@ -1,5 +1,6 @@
 import random
 
+from cards_building import cards_building
 from players import players
 
 
@@ -28,7 +29,9 @@ def place_type_is(place):
         case 5 | 15 | 25 | 35: place_type = 'Seaport'
         case 2 | 17 | 33: place_type = 'Treasury'
         case 7 | 22 | 36: place_type = 'Chance'
-        case _: place_type = 'Building'
+        case _:
+            place_type = 'Building'
+            check_building(players[1][2], cards_build)
     return place_type
 
 
@@ -42,6 +45,8 @@ def building_finder(place, file):
     return i, print(file[i])
 
 
+
+
 def money_up(player, quantity):
     players[player][2] += quantity
 
@@ -52,3 +57,20 @@ def money_down(player, quantity):
 
 def new_place(player, place):
     players[player][1] = place
+
+
+def check_building(place, file):
+    b = building_finder(place, file)
+    print(b)
+    if b[4] == 'free':
+        print('Free', end=' ')
+    else:
+        print('Owner:', b[4])
+
+
+
+
+
+
+def buy_building(player, place, file):
+    return
