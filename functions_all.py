@@ -19,6 +19,9 @@ def place_type_is(place):
         case 20: place_type = 'Free parking'
         case 30: place_type = 'Arrest'
         case 38: place_type = '-100$'
+        case 30:
+            place_type = 'Arrest'
+            new_place(1, 10)
         case 5 | 15 | 25 | 35: place_type = 'Seaport'
         case 2 | 17 | 33: place_type = 'Treasury'
         case 7 | 22 | 36: place_type = 'Chance'
@@ -45,3 +48,5 @@ def money_down(player, quantity):
 
 
 
+def new_place(player, place):
+    players[player][1] = place
