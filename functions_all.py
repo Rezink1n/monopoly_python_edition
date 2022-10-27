@@ -21,5 +21,9 @@ def make_step(place):
     return place, d
 
 
+def money_up(player, quantity):
+    players[player][2] += quantity
 
 
+def money_down(player, quantity):
+    players[player][2] -= quantity
