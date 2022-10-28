@@ -31,20 +31,15 @@ def place_type_is(place):
         case 7 | 22 | 36: place_type = 'Chance'
         case _:
             place_type = 'Building'
-            check_building(players[1][2], cards_build)
+            check_building(players[1][1], cards_building)
     return place_type
 
 
 def building_finder(place, file):
-    i = 0
-    while i < len(file):
+    for i in range(len(file)):
         if file[i][0] == place:
             break
-        else:
-            i += 1
-    return i, print(file[i])
-
-
+    return file[i]
 
 
 def money_up(player, quantity):
@@ -61,7 +56,6 @@ def new_place(player, place):
 
 def check_building(place, file):
     b = building_finder(place, file)
-    print(b)
     if b[4] == 'free':
         print('Free', end=' ')
     else:
