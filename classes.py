@@ -1,8 +1,7 @@
 class Card:
-
     type = 'Default Card'
 
-    def __init__(self, place, name, cost, owner, bail_cost, bailed):
+    def __init__(self, place, name: str, owner: str, cost, bail_cost, bailed: bool):
         self.place = place
         self.name = name
         self.cost = cost
@@ -14,18 +13,18 @@ class Card:
         print('Place: ' + str(self.place))
         print('Type: ' + str(self.type))
         print('Name: ' + str(self.name))
-        print('Cost: ' + str(self.cost))
         print('Owner: ' + str(self.owner))
+        print('Cost: ' + str(self.cost))
         print('Bail cost: ' + str(self.bail_cost))
         print('Bailed: ' + str(self.bailed))
 
 
 class Building(Card):
-
     type = 'Building'
 
-    def __init__(self, place, name, cost, owner, bail_cost, bailed, group, rent, houses, house_cost, monopolized):
-        super().__init__(place, name, cost, owner, bail_cost, bailed)
+    def __init__(self, place, name: str, owner: str, cost, bail_cost, bailed: bool,
+                 group: str, rent: list, houses, house_cost, monopolized: bool):
+        super().__init__(place, name, owner, cost, bail_cost, bailed)
         self.group = group
         self.rent = rent
         self.houses = houses
@@ -42,11 +41,10 @@ class Building(Card):
 
 
 class Seaport(Card):
-
     type = 'Seaport'
 
-    def __init__(self, place, name, cost, owner, bail_cost, bailed, rent, connection):
-        super().__init__(place, name, cost, owner, bail_cost, bailed)
+    def __init__(self, place, name: str, owner: str, cost, bail_cost, bailed: bool, rent: list, connection):
+        super().__init__(place, name, owner, cost, bail_cost, bailed)
         self.rent = rent
         self.connection = connection
 
@@ -57,11 +55,10 @@ class Seaport(Card):
 
 
 class Company(Card):
-
     type = 'Company'
 
-    def __init__(self, place, name, cost, owner, bail_cost, bailed, rent, connection):
-        super().__init__(place, name, cost, owner, bail_cost, bailed)
+    def __init__(self, place, name: str, owner: str, cost, bail_cost, bailed: bool, rent: list, connection):
+        super().__init__(place, name, owner, cost, bail_cost, bailed)
         self.rent = rent
         self.connection = connection
 
@@ -70,5 +67,22 @@ class Company(Card):
         print('Rent: ' + str(self.rent))
         print('Connection: ' + str(self.connection))
 
-#
-#
+
+class Player:
+    def __init__(self, number, name: str, place, money, own: list, moved: bool):
+        self.number = number
+        self.name = name
+        self.place = place
+        self.money = money
+        self.own = own
+        self.moved = moved
+
+    def info(self):
+        print('Number: ' + str(self.number))
+        print('Name: ' + str(self.name))
+        print('Place: ' + str(self.place))
+        print('Money: ' + str(self.money))
+        print('Own: ' + str(self.own))
+        print('Moved: ' + str(self.moved))
+
+
