@@ -1,0 +1,1 @@
+[["place", "name", "owner", "cost", "bail_cost", "bailed", "rent", "connection"], [5, "West seaport", "free", 200, 100, false, [25, 50, 100, 200], 0], [15, "North seaport", "free", 200, 100, false, [25, 50, 100, 200], 0], [25, "East seaport", "free", 200, 100, false, [25, 50, 100, 200], 0], [35, "South seaport", "free", 200, 100, false, [25, 50, 100, 200], 0]]

@@ -1,0 +1,1 @@
+[["number", "name", "place", "money", "own[]", "moved"], [1, "Alex", 0, 1500, [0], false], [2, "Bob", 0, 1500, [0], false], [3, "Calvin", 0, 1500, [0], false], [4, "Derek", 0, 1500, [0], false]]
