@@ -1,2 +1,4 @@
 # monopoly_python_edition
- Monopoly written in Python 3.10+
+Not work yet
+I use i for my learning.
+Written in Python 3.10+
