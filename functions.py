@@ -1,8 +1,8 @@
-import random
 import classes
 
 
 def make_step(x):
+    import random
     d = random.randint(2, 12)
     x += d
     if x > 39:
