@@ -131,6 +131,4 @@ def get_player(number):
 # -------------------------------------
 
 player = get_player(1)
-place = player.place
-money = player.money
 
