@@ -3,4 +3,4 @@
  
  I use it for my learning
  
- Written in Python 3.11
+ Python 3.10+
