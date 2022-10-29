@@ -2,13 +2,13 @@ import random
 import classes
 
 
-def make_step(place):
+def make_step(x):
     d = random.randint(2, 12)
-    place += d
-    if place > 39:
-        place -= 40
-        money_up(1, 200)
-    return place, d
+    x += d
+    if x > 39:
+        x -= 40
+        money_up(player, 200)
+    return x, d  # x-place d-dice
 
 
 def place_type_is(place):
@@ -28,10 +28,10 @@ def place_type_is(place):
             place_type = 'Free parking'
         case 30:
             place_type = 'Arrest'
-            new_place(1, 10)
+            new_place(player, 10)
         case 38:
             place_type = '-100$'
-            money_down(1, 100)
+            money_down(player, 100)
         case 5 | 15 | 25 | 35:
             place_type = 'Seaport'
             b = get_seaport(place)
@@ -133,3 +133,4 @@ def get_player(number):
 player = get_player(1)
 place = player.place
 money = player.money
+
