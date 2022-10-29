@@ -29,18 +29,6 @@ def checking_list(file):
         i2 += 1
 
 
-def place_finder(place, file):
-    i = 0
-    f = 0
-    while i < len(file):
-        if file[i][0] == place:
-            break
-        else:
-            i += 1
-            f += 1
-    return print(file[i])
-
-
 # while x != 0:
 #     x = int(input('Введите номер клетки: '))
 #

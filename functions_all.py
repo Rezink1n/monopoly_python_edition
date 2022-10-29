@@ -61,7 +61,18 @@ def check_building(place, file):
     else:
         print('Owner:', b[4])
 
-
+def checking_list(file):
+    i2 = 1
+    while i2 < len(file):
+        x = file[i2]
+        i = 0
+        while i < len(file[0]):
+            print(file[0][i], end=' - ')
+            print(x[i])
+            i += 1
+        i = 0
+        print('\n')
+        i2 += 1
 
 
 
