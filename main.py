@@ -4,12 +4,19 @@ from players import players
 from cards_building import cards_building
 
 
+act = ''
+place = players[1][1]
+money = players[1][2]
 
-for i in range(100):
-    players[1][1], dice = func.make_step(players[1][1])
-
-    print('+', dice, players[1][1], end='|')
-    print(func.place_type_is(players[1][1]), end='|')
-    print('Money:', players[1][2])
-
-
+while act != exit:
+    act = input(' > ')
+    match act:
+        case 'info': print('Info')
+        case 'move':
+            place, dice = func.make_step(place)
+            print('Dice:', dice, '\nPlace:', place)
+            print(func.place_type_is(place), end='|')
+            print('Money:', money)
+        case 'exit':
+            print('Exit')
+            break
