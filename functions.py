@@ -48,12 +48,6 @@ def place_type_is(place):
     print(place_type)
 
 
-def building_finder(place, file):
-    i = 0
-    for i in range(len(file)):
-        if file[i][0] == place:
-            break
-    return file[i]
 
 
 def money_up(player, quantity):
@@ -73,10 +67,6 @@ def check_owner(owner):
         print('Free', end=' ')
     else:
         print('Owner:', owner)
-
-
-def buy_building(player, place, file):
-    return
 
 
 def get_building(place):
@@ -131,4 +121,3 @@ def get_player(number):
 # -------------------------------------
 
 player = get_player(1)
-
