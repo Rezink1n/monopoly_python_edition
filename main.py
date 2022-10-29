@@ -1,6 +1,5 @@
 #  ADD GitHub
 import functions as f
-import classes
 
 
 act = ''

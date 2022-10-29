@@ -84,5 +84,3 @@ class Player:
         print('Money: ' + str(self.money))
         print('Own: ' + str(self.own))
         print('Moved: ' + str(self.moved))
-
-
