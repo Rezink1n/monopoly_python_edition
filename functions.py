@@ -1,16 +1,6 @@
 import classes
 
 
-def make_step(x):
-    import random
-    d = random.randint(2, 12)
-    x += d
-    if x > 39:
-        x -= 40
-        money_up(player, 200)
-    return x, d  # x-place d-dice
-
-
 def place_type_is(place):
     place_type = ''
     match place:
@@ -48,6 +38,14 @@ def place_type_is(place):
     print(place_type)
 
 
+def make_step(x):
+    import random
+    d = random.randint(2, 12)
+    x += d
+    if x > 39:
+        x -= 40
+        money_up(player, 200)
+    return x, d  # x-place d-dice
 
 
 def money_up(player, quantity):
